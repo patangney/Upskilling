@@ -1,0 +1,54 @@
+AJAX is not
+1. A libary
+2. A framework
+3. A technology
+
+AJAX is an approach to building a website using existing tools and technologies
+Update the content without refreshing
+
+HTML, JS, The Dom, CSS, XMLHTTP Requests
+
+
+1. XMLHTTP Requests
+2. The Fetch API
+3. 3rd Party Libraries: jQuery, Axios, etc.
+--------------------------------------------------------------------
+
+XML AND JSON
+
+Both data formats
+
+JSON View extension
+
+-----
+Problems with XHR
+1. Ugly, bulky syntax
+
+
+----
+Fetch
+
+Stream the data back and search
+returns a promise
+
+fetch(url)
+.then(function(res))
+.catch()
+
+
+Fetch Options
+fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({
+        name: 'blue',
+        login: 'bluecat'
+    })
+})
+.then(function (data){
+    //do something
+})
+.catch(function (error){
+    //handle error
+})
+
+https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch

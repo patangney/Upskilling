@@ -1,0 +1,32 @@
+/* :hover - Trigger by a user mousing over */
+ h1:hover {
+     background: purple;
+ }
+
+ button:hover {
+     color: white;
+ }
+
+
+ /* :focus - click into element, tab, */
+ input:focus {
+     background-color: teal;
+ }
+
+ button:focus {
+     border-radius: 10px;
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     background-color: #2eec71;
+}
+
+button:active {
+    background-color: orange;
+    font-size: 30px;
+}
+
+p:active, h1:active{
+    background-color: yellow;
+}

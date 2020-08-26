@@ -1,0 +1,12 @@
+{
+    "in": [
+        "rotate.css",
+        "scaling.css"
+    ],
+    "out": "baz.css",
+    "browsers": [
+        "last 3 versions",
+        "Android 2.3",
+        "ie 9"
+    ]
+}
