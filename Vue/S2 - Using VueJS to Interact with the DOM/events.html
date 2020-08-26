@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VueJS</title>
+	<link rel="stylesheet" href="">
+	<script src="vue.js"></script>
+</head>
+<body>
+	
+        <div id="myApp">
+
+             <button v-on:click="increase">
+                test
+             </button>
+
+             <button v-on:click="increaseArgs(2)">
+                pass event
+             </button>
+
+             <button v-on:click="increaseArgs(2, $event)">
+                pass event args
+             </button>
+             <button v-on:click="counter++">
+                counter
+             </button>
+
+             <p>{{ counter }}</p>
+
+             <p>{{ counter * 2 > 10 ? 'Greater then 10': 'Smaller than 10'}}</p>
+             
+             <p v-on:mousemove="updateCords">Coordinated: {{ x }} / {{ y }} - <span v-on:mousemove="dummy">Dead Spot</span></p>
+
+             <!--Modifier Version-->
+             <p v-on:mousemove="updateCords">Coordinated: {{ x }} / {{ y }} - <span v-on:mousemove.stop>Dead Spot</span></p>
+
+             <input type="text" v-on:keyup.enter.space="alert">
+
+             
+         </div>
+	
+	<script>
+
+    new Vue({
+        el: '#myApp',
+        data: {
+            counter: 0,
+            x: 0,
+            y: 0
+            
+        },
+
+        methods: {
+            increase: function() {
+                //<button v-on:click="increase">
+                this.counter++;
+
+            },
+            increaseArgs: function(passArgs, event) {
+                //<button v-on:click="increaseArgs(2)">
+                this.counter+= passArgs;
+
+            },
+            updateCords: function(event) {
+                this.x = event.clientX;
+                this.y = event.clientY;
+            },
+            dummy: function(event){
+                event.stopPropagation();
+            },
+
+            alert: function(){
+                alert('Alert!')
+            }
+        }
+        
+    
+    });
+
+    console.log("test");
+	</script>
+</body>
+</html>
